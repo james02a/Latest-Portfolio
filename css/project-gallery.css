@@ -29,6 +29,10 @@
   --pg-radius-full: 999px;
   --pg-ease: cubic-bezier(0.16, 1, 0.3, 1);
   --pg-max-w: 1400px;
+  --font-display: "Archivo", sans-serif;
+  --font-body: "Instrument Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
 
   position: relative;
   background: var(--pg-bg);
@@ -66,9 +70,10 @@
   margin: 0;
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   line-height: 1.08;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--pg-text);
+font-family: var(--font-display);
 }
 
 .pg-accent-line {
@@ -77,6 +82,7 @@
   height: 2px;
   margin: 26px auto 24px;
   background: linear-gradient(90deg, transparent, var(--pg-accent), transparent);
+  
 }
 
 .pg-description {
@@ -91,7 +97,7 @@
 
 .pg-preview {
   margin: clamp(48px, 7vw, 88px) auto 0;
-  max-width: 1180px;
+  max-width: 1290px;
 }
 
 .pg-preview-frame {
