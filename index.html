@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/project-gallery.css" />
 </head>
 <body>
 
@@ -29,6 +30,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-link is-active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
+         <li><a href="#project-gallery" class="nav-link is-active">Projects</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -65,9 +67,12 @@
       <ul class="mnav__links">
         <li class="mnav__item"><a href="#home" class="mnav__link is-active"><span class="mnav__idx" aria-hidden="true">01</span>Home</a></li>
         <li class="mnav__item"><a href="#about" class="mnav__link"><span class="mnav__idx" aria-hidden="true">02</span>About</a></li>
-        <li class="mnav__item"><a href="#experience" class="mnav__link"><span class="mnav__idx" aria-hidden="true">03</span>Experience</a></li>
-        <li class="mnav__item"><a href="#services" class="mnav__link"><span class="mnav__idx" aria-hidden="true">04</span>Services</a></li>
-        <li class="mnav__item"><a href="#contact" class="mnav__link"><span class="mnav__idx" aria-hidden="true">05</span>Contact</a></li>
+        <li class="mnav__item"><a href="#project-gallery" class="mnav__link"><span class="mnav__idx" aria-hidden="true">03</span>Projects</a></li>
+
+        <li class="mnav__item"><a href="#experience" class="mnav__link"><span class="mnav__idx" aria-hidden="true">04</span>Experience</a></li>
+        <li class="mnav__item"><a href="#services" class="mnav__link"><span class="mnav__idx" aria-hidden="true">05</span>Services</a></li>
+       
+       <li class="mnav__item"><a href="#contact" class="mnav__link"><span class="mnav__idx" aria-hidden="true">06</span>Contact</a></li>
       </ul>
     </nav>
 
@@ -186,6 +191,38 @@
 </a>  
             </div>
           </article>
+
+            <article class="carousel__slide">
+            <img src="assest/project7.png" alt="Project Four preview" loading="lazy" />
+            <div class="carousel__meta">
+              <div>
+                <p class="carousel__tag">Web Migration · 2026</p>
+                <h3 class="carousel__title">WP to Duda Builder</h3>
+              </div>
+              <a href="https://www.https://www.cloisterinn.com/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="carousel__link">
+    View Site <span aria-hidden="true">→</span>
+</a>  
+            </div>
+          </article>
+
+           <article class="carousel__slide">
+            <img src="assest/project-9.png" alt="Project Four preview" loading="lazy" />
+            <div class="carousel__meta">
+              <div>
+                <p class="carousel__tag">Web Migration · 2026</p>
+                <h3 class="carousel__title">WP to Duda Builder</h3>
+              </div>
+              <a href="https://www.downsyndromealabama.org/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="carousel__link">
+    View Site <span aria-hidden="true">→</span>
+</a>  
+            </div>
+          </article>
           
 
         </div>
@@ -288,6 +325,63 @@
       </div>
       </section>
     </div><!-- /about-curtain -->
+
+
+    <section  class="pg-gallery" id="project-gallery" aria-labelledby="pg-heading">
+  <div class="pg-container">
+
+    <!-- ===== Top area: eyebrow, heading, description, accent line ===== -->
+    <header class="pg-header pg-reveal">
+      <p class="pg-eyebrow">Selected Work</p>
+      <h2 class="pg-heading" id="pg-heading">Project Gallery</h2>
+      <span class="pg-accent-line" aria-hidden="true"></span>
+      <p class="pg-description">
+        A curated collection of websites I've designed and developed for clients
+        across different industries. Browse completed projects, explore their
+        designs, and visit the live websites to see the final result.
+      </p>
+    </header>
+
+    <!-- ===== Middle area: large preview image in glass frame ===== -->
+    <div class="pg-preview pg-reveal" style="--pg-delay: 120ms;">
+      <div class="pg-preview-frame">
+        <img
+          class="pg-preview-img"
+          src="assest/Screenshot 2026-07-21 172314.png"
+          alt="Dashboard-style preview of multiple client project thumbnails"
+          width="1400"
+          height="900"
+          loading="lazy"
+        />
+        <span class="pg-preview-glow" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- ===== CTA ===== -->
+    <div class="pg-cta-wrap pg-reveal" style="--pg-delay: 220ms;">
+   <a href="https://design-cache-zenko.lovable.app/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="pg-cta">
+  <span class="pg-cta-label">Browse All Projects</span>
+  <span class="pg-cta-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12h14M13 6l6 6-6 6"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+  </span>
+</a>
+    </div>
+
+  </div>
+
+  <!-- Ambient floating accents, purely decorative -->
+  <div class="pg-float pg-float--a" aria-hidden="true"></div>
+  <div class="pg-float pg-float--b" aria-hidden="true"></div>
+</section>
 
     <!-- ============ 4. EXPERIENCE ============ -->
     <!-- Structure: .exp__inner is a 2-col grid. .exp__media is sticky and
@@ -548,6 +642,7 @@ Developed and delivered <strong>100+ high-quality websites</strong>, including <
         <ul class="footer__nav" aria-label="Footer">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+            <li><a href="#project-gallery">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -586,6 +681,7 @@ Developed and delivered <strong>100+ high-quality websites</strong>, including <
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/project-gallery.js"></script>
 
 </body>
 </html>

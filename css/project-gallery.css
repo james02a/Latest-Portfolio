@@ -1,0 +1,337 @@
+/*
+  ============================================================
+  PROJECT GALLERY SECTION — styles
+  ------------------------------------------------------------
+  - All selectors are scoped under .pg-gallery / .pg-* classes.
+  - No resets, no global element selectors, no font overwrites.
+  - Tokens live in --pg-* variables scoped to .pg-gallery, so
+    they never leak into or collide with your site's own
+    variables (even if you also use --accent, --bg, etc.).
+  - Tune the palette by editing the :root-style block below.
+  ============================================================
+*/
+
+.pg-gallery {
+  /* ---- Design tokens (edit these to match your exact site palette) ---- */
+  --pg-bg: #0b0b0d;
+  --pg-bg-soft: #131316;         /* surface */
+  --pg-surface: #1a1a1e;         /* surface-2, used for the glass panel base */
+  --pg-border: rgba(236, 236, 230, 0.1);
+  --pg-border-strong: rgba(67, 83, 255, 0.4);
+  --pg-text: #ecece6;
+  --pg-text-muted: #8f8f88;
+  --pg-accent: #4353ff;
+  --pg-accent-soft: #7c88ff;     /* lighter step of --pg-accent, for gradients */
+  --pg-accent-dim: rgba(67, 83, 255, 0.14);
+  --pg-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.65);
+  --pg-radius-lg: 22px;
+  --pg-radius-md: 14px;
+  --pg-radius-full: 999px;
+  --pg-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --pg-max-w: 1400px;
+
+  position: relative;
+  background: var(--pg-bg);
+  color: var(--pg-text);
+  padding: clamp(72px, 10vw, 140px) clamp(20px, 5vw, 64px);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.pg-container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--pg-max-w);
+  margin: 0 auto;
+}
+
+/* ============================== HEADER ============================== */
+
+.pg-header {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pg-eyebrow {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pg-accent);
+}
+
+.pg-heading {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--pg-text);
+}
+
+.pg-accent-line {
+  display: block;
+  width: 64px;
+  height: 2px;
+  margin: 26px auto 24px;
+  background: linear-gradient(90deg, transparent, var(--pg-accent), transparent);
+}
+
+.pg-description {
+  margin: 0 auto;
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--pg-text-muted);
+}
+
+/* ============================== PREVIEW ============================== */
+
+.pg-preview {
+  margin: clamp(48px, 7vw, 88px) auto 0;
+  max-width: 1180px;
+}
+
+.pg-preview-frame {
+  position: relative;
+  border-radius: var(--pg-radius-lg);
+  padding: 10px;
+  /* blend the (solid) surface token with transparency so the
+     backdrop-filter blur below still reads as "glass" */
+  background: color-mix(in srgb, var(--pg-surface) 65%, transparent);
+  border: 1px solid var(--pg-border);
+  box-shadow: var(--pg-shadow);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  overflow: hidden;
+  transition: border-color 480ms var(--pg-ease), box-shadow 480ms var(--pg-ease), transform 480ms var(--pg-ease);
+}
+
+.pg-preview-frame:hover,
+.pg-preview-frame:focus-within {
+  border-color: var(--pg-border-strong);
+  transform: translateY(-6px);
+  box-shadow: 0 40px 100px -24px rgba(0, 0, 0, 0.75), 0 0 0 1px var(--pg-border-strong);
+}
+
+.pg-preview-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: calc(var(--pg-radius-lg) - 8px);
+  transition: transform 900ms var(--pg-ease);
+  will-change: transform;
+}
+
+.pg-preview-frame:hover .pg-preview-img,
+.pg-preview-frame:focus-within .pg-preview-img {
+  transform: scale(1.035);
+}
+
+/* soft glow that intensifies on hover — the "border glow" effect */
+.pg-preview-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--pg-radius-lg);
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(120% 120% at 50% 0%, var(--pg-accent-dim), transparent 60%);
+  transition: opacity 480ms var(--pg-ease);
+}
+
+.pg-preview-frame:hover .pg-preview-glow,
+.pg-preview-frame:focus-within .pg-preview-glow {
+  opacity: 1;
+}
+
+/* ============================== CTA ============================== */
+
+.pg-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(36px, 5vw, 56px);
+}
+
+.pg-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: var(--pg-radius-full);
+  background: linear-gradient(135deg, var(--pg-accent) 0%, var(--pg-accent-soft) 100%);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 380ms var(--pg-ease), box-shadow 380ms var(--pg-ease);
+  box-shadow: 0 12px 30px -10px rgba(67, 83, 255, 0.55);
+}
+
+.pg-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, var(--pg-accent-soft) 0%, var(--pg-accent) 100%);
+  opacity: 0;
+  transition: opacity 380ms var(--pg-ease);
+}
+
+.pg-cta:hover,
+.pg-cta:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px -12px rgba(67, 83, 255, 0.65);
+}
+
+.pg-cta:hover::before,
+.pg-cta:focus-visible::before {
+  opacity: 1;
+}
+
+.pg-cta-label {
+  position: relative;
+}
+
+.pg-cta-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 380ms var(--pg-ease);
+}
+
+.pg-cta:hover .pg-cta-icon,
+.pg-cta:focus-visible .pg-cta-icon {
+  transform: translateX(4px);
+}
+
+.pg-cta:focus-visible {
+  outline: 2px solid var(--pg-accent-soft);
+  outline-offset: 3px;
+}
+
+/* ============================== AMBIENT FLOATERS ============================== */
+
+.pg-float {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.pg-float--a {
+  width: 320px;
+  height: 320px;
+  top: -80px;
+  left: -80px;
+  background: var(--pg-accent-dim);
+  animation: pg-float-drift 14s ease-in-out infinite;
+}
+
+.pg-float--b {
+  width: 260px;
+  height: 260px;
+  bottom: -60px;
+  right: -60px;
+  background: var(--pg-accent-dim);
+  animation: pg-float-drift 18s ease-in-out infinite reverse;
+}
+
+@keyframes pg-float-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(24px, -18px); }
+}
+
+/* ============================== SCROLL REVEAL ============================== */
+
+.pg-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 760ms var(--pg-ease), transform 760ms var(--pg-ease);
+  transition-delay: var(--pg-delay, 0ms);
+}
+
+.pg-reveal.pg-is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================== RESPONSIVE ============================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .pg-gallery {
+    padding: clamp(56px, 9vw, 96px) clamp(18px, 5vw, 40px);
+  }
+
+  .pg-preview {
+    margin-top: 48px;
+  }
+
+  .pg-heading {
+    font-size: clamp(1.9rem, 6vw, 2.6rem);
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .pg-header {
+    text-align: left;
+  }
+
+  .pg-accent-line {
+    margin-left: 0;
+  }
+
+  .pg-description {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  .pg-preview-frame {
+    padding: 6px;
+    border-radius: var(--pg-radius-md);
+  }
+
+  .pg-preview-img {
+    border-radius: calc(var(--pg-radius-md) - 4px);
+    aspect-ratio: 4 / 5;
+  }
+
+  .pg-cta-wrap {
+    justify-content: flex-start;
+  }
+
+  .pg-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .pg-reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .pg-preview-img,
+  .pg-preview-frame,
+  .pg-cta,
+  .pg-cta-icon,
+  .pg-float {
+    transition: none;
+    animation: none;
+  }
+}
