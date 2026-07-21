@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Your Name</title>
+  <meta name="description" content="Premium portfolio of Your Name — designer & developer." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assest/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assest/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assest/logo.png">
+<link rel="shortcut icon" href="assest/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ 1. NAVIGATION ============ -->
+  <header class="site-nav" id="siteNav">
+    <a href="#home" class="nav-logo" aria-label="Home">
+      <span class="nav-logo__dot" aria-hidden="true"></span>
+      <span class="nav-logo__text logo-image"><img src="assest/withbgaaa.png" alt=""></span>
+    </a>
+
+    <nav class="nav-scroller" aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link is-active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contact" class="nav-cta">Let's talk</a>
+
+    <!-- Hamburger (tablet & mobile only) -->
+    <button
+      class="nav-burger"
+      id="navBurger"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+      aria-haspopup="true"
+    >
+      <span class="nav-burger__box" aria-hidden="true">
+        <span class="nav-burger__line"></span>
+        <span class="nav-burger__line"></span>
+        <span class="nav-burger__line"></span>
+      </span>
+    </button>
+  </header>
+
+  <!-- ============ 1b. MOBILE NAVIGATION (≤1024px) ============ -->
+  <div class="mnav-backdrop" id="mnavBackdrop" aria-hidden="true"></div>
+
+  <aside class="mnav" id="mobileNav" aria-hidden="true">
+    <p class="mnav__eyebrow">Menu</p>
+
+    <nav aria-label="Mobile primary">
+      <ul class="mnav__links">
+        <li class="mnav__item"><a href="#home" class="mnav__link is-active"><span class="mnav__idx" aria-hidden="true">01</span>Home</a></li>
+        <li class="mnav__item"><a href="#about" class="mnav__link"><span class="mnav__idx" aria-hidden="true">02</span>About</a></li>
+        <li class="mnav__item"><a href="#experience" class="mnav__link"><span class="mnav__idx" aria-hidden="true">03</span>Experience</a></li>
+        <li class="mnav__item"><a href="#services" class="mnav__link"><span class="mnav__idx" aria-hidden="true">04</span>Services</a></li>
+        <li class="mnav__item"><a href="#contact" class="mnav__link"><span class="mnav__idx" aria-hidden="true">05</span>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="mnav__foot">
+      <a href="#contact" class="mnav__cta">Let's talk</a>
+      <a href="mailto:jamesmelvinp@gmail.com class="mnav__mail">jamesmelvinp@gmail.com</a>
+    </div>
+  </aside>
+
+  <div class="site-main" id="siteMain">
+
+    <!-- ============ 2. HERO ============ -->
+    <section class="hero" id="home">
+      <!-- Ambient particle field (decorative, purely visual) -->
+      <canvas class="hero__particles" id="heroParticles" aria-hidden="true"></canvas>
+
+      <!-- Left: project carousel -->
+      <div class="hero__carousel carousel" id="carousel">
+        <div class="carousel__track" id="carouselTrack">
+
+          <article class="carousel__slide">
+            <img src="assest/porject6.png" alt="Project One preview" loading="eager" />
+            <div class="carousel__meta">
+              <div>
+              <p class="carousel__tag">Business Website Development · 2026</p>
+                <h3 class="carousel__title">Duda Builder</h3>
+              </div>
+<a href="https://www.innerpeacecounsellingservices.com.au/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="carousel__link">
+    View Site <span aria-hidden="true">→</span>
+</a>     
+
+
+</div>
+          </article>
+
+          <article class="carousel__slide">
+            <img src="assest/prject2.png" alt="Project Two preview" loading="lazy" />
+            <div class="carousel__meta">
+              <div>
+                <p class="carousel__tag">Business Website Development · 2025</p>
+                <h3 class="carousel__title">Html, Css, &amp; Js</h3>
+              </div>
+              <a href="https://www.acxend.com/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="carousel__link">
+    View Site <span aria-hidden="true">→</span>
+</a>    
+            </div>
+          </article>
+
+          <article class="carousel__slide">
+            <img src="assest/project3.png" alt="Project Three preview" loading="lazy" />
+            <div class="carousel__meta">
+              <div>
+                <p class="carousel__tag">Web Development · 2025</p>
+                <h3 class="carousel__title">Duda Builder</h3>
+              </div>
+<a href="https://www.thatprintedvinylplace.com.au/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="carousel__link">
+    View Site <span aria-hidden="true">→</span>
+</a>              </div>
+          </article>
+
+          <article class="carousel__slide">
+            <img src="assest/project 4.png" alt="Project Four preview" loading="lazy" />
+            <div class="carousel__meta">
+              <div>
+                <p class="carousel__tag">Web Development · 2024</p>
+                <h3 class="carousel__title">Duda Builder</h3>
+              </div>
+              <a href="https://www.thatprintedvinylplace.com.au/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="carousel__link">
+    View Site <span aria-hidden="true">→</span>
+</a>  
+            </div>
+          </article>
+
+
+          <article class="carousel__slide">
+            <img src="assest/project5.png" alt="Project Four preview" loading="lazy" />
+            <div class="carousel__meta">
+              <div>
+                <p class="carousel__tag">Dynamic Website · 2026</p>
+                <h3 class="carousel__title">Lovable Ai</h3>
+              </div>
+              <a href="https://pawsitivecaresite.lovable.app"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="carousel__link">
+    View Site <span aria-hidden="true">→</span>
+</a>  
+            </div>
+          </article>
+
+          
+          <article class="carousel__slide">
+            <img src="assest/rayzr_showcase_square.png" alt="Project Four preview" loading="lazy" />
+            <div class="carousel__meta">
+              <div>
+                <p class="carousel__tag">Web Development · 2026</p>
+                <h3 class="carousel__title">Duda Builder</h3>
+              </div>
+              <a href=" https://www.rayzrhairartistry.com/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="carousel__link">
+    View Site <span aria-hidden="true">→</span>
+</a>  
+            </div>
+          </article>
+          
+
+        </div>
+
+        <div class="carousel__controls">
+          <button class="carousel__btn" id="carouselPrev" aria-label="Previous project">←</button>
+          <span class="carousel__counter"><span id="carouselIndex">01</span> / <span id="carouselTotal">04</span></span>
+          <button class="carousel__btn" id="carouselNext" aria-label="Next project">→</button>
+        </div>
+      </div>
+
+      <!-- Right: introduction -->
+      <div class="hero__intro">
+        <div class="hero__avatar" data-reveal>
+          <img src="assest/profile.jpg" alt="Portrait of Your Name" />
+          <span class="hero__avatar-status" aria-hidden="true" title="Available for work"></span>
+        </div>
+
+        <p class="eyebrow" data-reveal>Portfolio — 2026</p>
+
+        <h1 class="hero__headline" data-reveal>
+          <span>Website</span>
+          <span>Solutions</span>
+          <span>Specialist</span>
+        </h1>
+
+        <p class="hero__copy" data-reveal>
+         Hi, I'm <strong>James Melvin Panton</strong>, a <strong>Website Specialist</strong> based in the Philippines. I build modern, <strong>SEO-optimized</strong> websites using <strong>Duda</strong>, <strong>WordPress</strong>, and <strong>AI-powered vibe coding</strong> to create fast, responsive, and high-performing digital experiences.
+        </p>
+
+        <p class="hero__location" data-reveal>
+          <span class="hero__location-dot" aria-hidden="true"></span>
+          Based in Metro Manila, Philippines
+        </p>
+
+        <div class="hero__actions" data-reveal>
+          <a href="#contact" class="btn btn--solid">Contact me</a>
+          <a href="/assest/Panton James Melvin_Resume.docx" class="btn btn--ghost" download>Download Resume</a>
+        </div>
+
+        <ul class="socials" data-reveal aria-label="Social media">
+          <li><a href="https://www.linkedin.com/in/james-melvin-panton-6798a426b/"  target="_blank"
+   rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9Z"/></svg></a></li>
+          <!-- <li><a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg></a></li> -->
+          <li><a href="https://www.instagram.com/hi_zenko/"   target="_blank"
+   rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1Zm0 3.7a6.1 6.1 0 1 0 0 12.2 6.1 6.1 0 0 0 0-12.2Zm0 2.2a3.9 3.9 0 1 1 0 7.8 3.9 3.9 0 0 1 0-7.8Zm6.4-3.9a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg></a></li>
+          <!-- <li><a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.3l-4.9-6.4L5 21H1.9l7.3-8.3L2.2 3h6.4l4.4 5.9L17.5 3Zm-1.1 16.1h1.7L6.9 4.8H5.1l11.3 14.3Z"/></svg></a></li> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 3. ABOUT (curtain reveal beneath the hero) ============ -->
+    <div class="about-curtain" id="aboutCurtain">
+      <div class="about-anchor" id="about" aria-hidden="true"></div>
+      <section class="about section">
+      <div class="about__grid" id="aboutGrid">
+        <div class="about__text">
+          <p class="eyebrow" data-reveal>About me</p>
+          <h2 class="section__title" data-reveal>Building<br /><strong>Better Websites</strong></h2>
+          <p class="about__copy" data-reveal>
+            I'm <strong>James Melvin Panton</strong>, a <strong>Website Specialist</strong> based in the <strong>Philippines</strong> who helps businesses establish a strong online presence through modern, high-performing websites. I specialize in developing responsive websites with <strong>Duda</strong> and <strong>WordPress</strong>, ensuring every project is fast, user-friendly, and built to support business growth.
+          </p>
+          <p class="about__copy" data-reveal>
+           By combining <strong>web development</strong>, <strong>SEO best practices</strong>, and <strong>AI-powered development workflows</strong>, I deliver efficient, scalable solutions without compromising quality. My goal is to create websites that not only look professional but also perform exceptionally and provide real value for every client.
+          </p>
+        </div>
+
+        <div class="skills" data-reveal>
+          <div class="skills__grid" id="skillsGrid">
+            <div class="skill-card">
+              <span class="skill-card__logo">
+                <svg viewBox="0 0 24 24" role="img" aria-label="Duda placeholder icon"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M6.5 6.7h.01M9 6.7h.01"/><path d="M8 13.5h5.5a2.5 2.5 0 0 1 0 5H8v-5Z"/></svg>
+              </span>
+              <span class="skill-card__name">Duda</span>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__logo">
+                <img src="https://cdn.simpleicons.org/wordpress/16161A" alt="WordPress logo" loading="lazy"
+                     onerror="this.closest('.skill-card__logo').classList.add('logo-fallback')" />
+                <span class="skill-card__mark" aria-hidden="true">W</span>
+              </span>
+              <span class="skill-card__name">WordPress</span>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__logo">
+                <svg viewBox="0 0 24 24" role="img" aria-label="Lovable placeholder icon"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.5 8.2 3.6 5 6.9 5c2 0 3.7 1.1 5.1 3 1.4-1.9 3.1-3 5.1-3 3.3 0 5.4 3.2 4.2 6.3-1.8 4.6-9.3 9.2-9.3 9.2Z"/></svg>
+              </span>
+              <span class="skill-card__name">Lovable</span>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__logo">
+                <img src="https://cdn.simpleicons.org/claude/16161A" alt="Claude logo" loading="lazy"
+                     onerror="this.closest('.skill-card__logo').classList.add('logo-fallback')" />
+                <span class="skill-card__mark" aria-hidden="true">Cl</span>
+              </span>
+              <span class="skill-card__name">Claude</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </div><!-- /about-curtain -->
+
+    <!-- ============ 4. EXPERIENCE ============ -->
+    <!-- Structure: .exp__inner is a 2-col grid. .exp__media is sticky and
+         pins itself for as long as .exp__list has cards left to scroll past.
+         Each .exp__item also carries its own .exp__item-img, which is
+         hidden on desktop/tablet and only shown on mobile (see CSS), so the
+         mobile layout can show "image above each card" without any JS. -->
+    <section class="exp" id="experience">
+      <div class="exp__inner">
+        <div class="exp__text">
+          <p class="eyebrow">Experience</p>
+          <h2 class="section__title">Journey<br /><em>&amp;</em> Expertise</h2>
+          
+
+          <div class="exp__list" id="expList" role="list">
+            <div class="exp__item is-active" data-index="0" role="listitem">
+              <img class="exp__item-img" src="httpcsum.photos/seed/process1/1000/1200s://pi" alt="Research phase" loading="lazy" />
+              <button class="exp__head" type="button" aria-current="true">
+                <span class="exp__num">2024-Present</span>
+                <span class="exp__name">eclerx Philippines</span>
+               <span>Duda Web Developer</span>
+              </button>
+              <div class="exp__body">
+                <p>
+Developed and delivered <strong>100+ high-quality websites</strong>, including <strong>new builds, redesigns, WordPress-to-Duda migrations, and complete website rebuilds</strong> for clients across multiple industries. Conducted comprehensive <strong>Quality Assurance (QA)</strong> testing to ensure functionality, responsiveness, accessibility, and cross-browser compatibility before launch. Worked directly with <strong>clients</strong> to manage change requests, implement revisions, and deliver solutions aligned with their business goals. Applied <strong>SEO best practices</strong>, <strong>performance optimization</strong>, and <strong>responsive web design</strong> to improve search visibility, user experience, and overall website performance.                </p>
+              </div>
+            </div>
+
+            <div class="exp__item" data-index="1" role="listitem">
+              <img class="exp__item-img" src="https://picsum.photos/seed/process2/1000/1200" alt="Design phase" loading="lazy" />
+              <button class="exp__head" type="button" aria-current="false">
+                <span class="exp__num">2023-2024</span>
+                <span class="exp__name">Concentrix</span>
+                <span>Customer Support Representative</span>
+              </button>
+              <div class="exp__body">
+                <p>Provided exceptional customer support by handling inquiries, resolving account and service-related issues, and delivering timely solutions through multiple communication channels. Maintained a strong focus on customer satisfaction, effective problem-solving, and clear communication while meeting performance metrics, quality standards, and service level agreements (SLAs). Developed strong skills in conflict resolution, active listening, time management, and working efficiently in a fast-paced, customer-focused environment.</p>
+              </div>
+            </div>
+
+            <div class="exp__item" data-index="2" role="listitem">
+              <img class="exp__item-img" src="https://picsum.photos/seed/process3/1000/1200" alt="Development phase" loading="lazy" />
+              <button class="exp__head" type="button" aria-current="false">
+                <span class="exp__num">2022-2023</span>
+                <span class="exp__name">Heart &amp; Skills</span>
+                <span>UI/UX Designer & WordPress Developer</span>
+              </button>
+              <div class="exp__body">
+                <p>Collaborated with a cross-functional team to design and develop <strong>modern, responsive websites</strong> for clients across various industries. Transformed <strong>Figma designs into fully functional WordPress websites</strong> while also <strong>building custom websites from scratch</strong>. Focused on creating <strong>intuitive UI/UX designs</strong>, seamless user experiences, and responsive layouts that aligned with client requirements and business objectives. Worked closely with designers and developers to ensure <strong>high-quality implementation</strong>, <strong>performance optimization</strong>, and consistent visual design across all devices.</p>
+              </div>
+            </div>
+
+            <div class="exp__item" data-index="3" role="listitem">
+              <img class="exp__item-img" src="https://picsum.photos/seed/process4/1000/1200" alt="Launch phase" loading="lazy" />
+              <button class="exp__head" type="button" aria-current="false">
+                <span class="exp__num">2022 (6 Months)</span>
+                <span class="exp__name">Jerskie Tailoring</span>
+                <span>Graphic Designer & Print Operator</span>
+              </button>
+              <div class="exp__body">
+                <p>Created <strong>custom T-shirt designs</strong>, <strong>tarpaulins</strong>, <strong>flyers</strong>, and <strong>invitation cards</strong> that aligned with client branding and design requirements. Produced high-quality print-ready graphics using <strong>Adobe Illustrator</strong>, <strong>Adobe Photoshop</strong>, and <strong>CorelDRAW</strong>. Operated <strong>DTF (Direct-to-Film) printing equipment</strong> and other <strong>commercial printing machines</strong> to ensure accurate color reproduction and high-quality final outputs. Collaborated with clients to refine concepts, incorporate feedback, and deliver visually compelling designs on time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp__media" aria-hidden="true">
+          <img src="assest/eclerx.png" alt="" class="exp__img is-active" data-index="0" />
+          <img src="assest/concentrix.png" alt="" class="exp__img is-below" data-index="1" />
+          <img src="assest/skillsss.png" alt="" class="exp__img is-below" data-index="2" />
+          <img src="assest/jerskie.png" alt="" class="exp__img is-below" data-index="3" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. SERVICES ============ -->
+    <section class="services" id="services">
+      <div class="services__sticky">
+        <div class="services__shell" id="servicesShell">
+
+          <!-- Background: developer building a website (dimmed for contrast) -->
+          <div class="services__bg" aria-hidden="true">
+            <img src="assest/image1.jpg" alt="" loading="lazy" />
+          </div>
+
+          <div class="services__intro">
+            <p class="eyebrow eyebrow--center">Services</p>
+            <h2 class="section__title section__title--center">What I can<br />do for you</h2>
+            <p class="services__hint">Scroll to explore what I offer.</p>
+            <span class="services__scroll-label">Scroll</span>
+          </div>
+
+          <div class="services__grid" id="servicesGrid">
+            <article class="service-card">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+              </span>
+              <h3>Web Design</h3>
+              <p>Grow your business with a modern, high-performing website built using <strong>Duda</strong>, <strong>WordPress</strong>, or AI-powered development with <strong>Lovable</strong> and <strong>Claude</strong>. Every website is <strong>responsive</strong>, <strong>SEO-friendly</strong>, and designed to <strong>convert visitors into customers</strong> while reflecting your brand.</p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m8 6-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg>
+              </span>
+              <h3>Development</h3>
+              <p>Bring your ideas to life with custom web development built for speed, scalability, and performance. From business websites to AI-powered web applications, I create <strong>responsive</strong>, <strong>secure</strong>, and <strong>high-performing</strong> solutions using modern technologies that help your business grow.</p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <h3>Website Migration & Upgrades</h3>
+              <p>Upgrade or migrate your website with confidence. I ensure a <strong>smooth transition</strong> between platforms, preserve your <strong>content and SEO</strong>, and enhance <strong>performance</strong>, <strong>security</strong>, and the overall user experience with minimal downtime.</p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V8M16 15v-6"/></svg>
+              </span>
+              <h3>SEO &amp; Strategy</h3>
+              <p>Build a stronger online presence with <strong>SEO-driven strategies</strong> that improve <strong>search visibility</strong>, <strong>website performance</strong>, and <strong>user engagement</strong>, helping your business attract the right audience and achieve long-term growth.</p>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <div class="contact__grid">
+        <div class="contact__text">
+          <p class="eyebrow" data-reveal>Contact</p>
+          <h2 class="section__title" data-reveal>Let's build<br />something together</h2>
+          <p class="contact__copy" data-reveal>
+           Have a project in mind? Let's create a modern, high-performing website tailored to your goals. Send me a message, and I'll get back to you within 24 hours.
+          </p>
+          <ul class="contact__details" data-reveal>
+            <li><span>Email</span><a href="mailto:jamesmelvinp@gmail.com">jamesmelvinp@gmail.com</a></li>
+            <li><span>Phone</span><a href="tel:+639514607815">+63 951 460 7815</a></li>
+          </ul>
+        </div>
+
+      <form
+  class="contact__form"
+  id="contactForm"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  novalidate
+  data-reveal
+>
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="d68f942b-a51c-4aac-a7b4-9a72dcb63296" />
+
+  <!-- Spam Protection -->
+  <input
+    type="checkbox"
+    name="botcheck"
+    class="hidden-field"
+    tabindex="-1"
+    autocomplete="off"
+    style="display:none;"
+  />
+
+  <!-- Optional -->
+  <input type="hidden" name="from_name" value="James Panton Portfolio" />
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="fName">Name</label>
+      <input
+        type="text"
+        id="fName"
+        name="name"
+        placeholder="Your name"
+        required
+      />
+      <p class="form-error">Please enter your name.</p>
+    </div>
+
+    <div class="form-field">
+      <label for="fEmail">Email</label>
+      <input
+        type="email"
+        id="fEmail"
+        name="email"
+        placeholder="you@email.com"
+        required
+      />
+      <p class="form-error">Please enter a valid email.</p>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label for="fSubject">Subject</label>
+    <input
+      type="text"
+      id="fSubject"
+      name="subject"
+      placeholder="What's this about?"
+      required
+    />
+    <p class="form-error">Please add a subject.</p>
+  </div>
+
+  <div class="form-field">
+    <label for="fMessage">Message</label>
+    <textarea
+      id="fMessage"
+      name="message"
+      rows="5"
+      placeholder="Tell me about your project…"
+      required
+    ></textarea>
+    <p class="form-error">Please write a message.</p>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn--solid btn--full"
+    id="formSubmit"
+  >
+    Send Message
+  </button>
+
+  <p
+    class="form-status form-status--success"
+    id="formSuccess"
+    role="status"
+  >
+    ✓ Message sent. I'll get back to you shortly.
+  </p>
+
+  <p
+    class="form-status form-status--error"
+    id="formError"
+    role="alert"
+  >
+    Something went wrong. Please try again or email me directly.
+  </p>
+</form>
+      </div>
+    </section>
+
+  </div><!-- /site-main -->
+
+  <!-- ============ 7. FOOTER (fixed reveal) ============ -->
+  <footer class="footer" id="siteFooter">
+    <div class="footer__inner" id="footerInner">
+      <div class="footer__top">
+        <a href="#home" class="nav-logo footer__logo" aria-label="Home">
+          <span class="nav-logo__dot" aria-hidden="true"></span>
+          <span class="nav-logo__text logo-image-footer"><img src="assest/logo.png" alt=""></span>
+        </a>
+
+        <ul class="footer__nav" aria-label="Footer">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__mid">
+        <div class="footer__col">
+          <span class="footer__label">Email</span>
+         <a href="mailto:jamesmelvinp@gmail.com">jamesmelvinp@gmail.com</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__label">Phone</span>
+         <a href="tel:+639514607815">+63 951 460 7815</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__label">Address</span>
+          <a href="https://maps.app.goo.gl/E2ghouRgENiJRrq76" target="_blank" rel="noopener noreferrer">
+    Valenzuela, Metro Manila
+</a>
+        </div>
+        <ul class="socials socials--footer" aria-label="Social media">
+        <li><a href="https://www.linkedin.com/in/james-melvin-panton-6798a426b/"  target="_blank"
+   rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9Z"/></svg></a></li>
+          <!-- <li><a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg></a></li> -->
+          <li><a href="https://www.instagram.com/hi_zenko/"   target="_blank"
+   rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1Zm0 3.7a6.1 6.1 0 1 0 0 12.2 6.1 6.1 0 0 0 0-12.2Zm0 2.2a3.9 3.9 0 1 1 0 7.8 3.9 3.9 0 0 1 0-7.8Zm6.4-3.9a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Your Name. All rights reserved.</p>
+        <p class="footer__credit">Designed &amp; built with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
