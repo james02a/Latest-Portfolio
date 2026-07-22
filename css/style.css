@@ -91,6 +91,16 @@ button {
   margin-bottom: 20px;
 }
 
+
+.eyebrow-hero {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
 .eyebrow--center {
   text-align: center;
 }
@@ -439,7 +449,7 @@ button {
   position: relative;
   width: clamp(64px, 6vw, 84px);
   height: clamp(64px, 6vw, 84px);
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .hero__avatar img {
@@ -1837,4 +1847,19 @@ html.mnav-lock body {
   .mnav__link {
     padding: 18px 0; /* larger tap zones */
   }
+}
+@media (max-width: 1920px) {
+  :root {
+    --nav-h: 104px; /* match actual laptop nav height */
+  }
+  
+  .hero__intro {
+    padding-top: calc(var(--nav-h) + 30px);
+  }
+  .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 15px;
+}
 }
