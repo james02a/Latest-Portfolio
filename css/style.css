@@ -440,7 +440,7 @@ button {
   flex-direction: column;
   justify-content: center;
   min-height: 0;
-  overflow-y: auto;
+  overflow-y: hidden;
   padding: calc(var(--nav-h) + 16px) var(--gutter) 40px;
 }
 
