@@ -16,8 +16,16 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/project-gallery.css" />
+   <link rel="stylesheet" href="css/loader.css" />
 </head>
 <body>
+
+<div id="loader">
+    <div class="loader">
+        <div class="shadow"></div>
+    </div>
+</div>
+
 
   <!-- ============ 1. NAVIGATION ============ -->
   <header class="site-nav" id="siteNav">
@@ -97,6 +105,7 @@
             <img src="assest/porject6.png" alt="Project One preview" loading="eager" />
             <div class="carousel__meta">
               <div>
+               
               <p class="carousel__tag">Business Website Development · 2026</p>
                 <h3 class="carousel__title">Duda Builder</h3>
               </div>
@@ -261,6 +270,7 @@
           <span class="hero__location-dot" aria-hidden="true"></span>
           Based in Metro Manila, Philippines
         </p>
+        
 
         <div class="hero__actions" data-reveal>
           <a href="#contact" class="btn btn--solid">Contact me</a>
@@ -686,6 +696,12 @@ Developed and delivered <strong>100+ high-quality websites</strong>, including <
 
   <script src="js/script.js"></script>
   <script src="js/project-gallery.js"></script>
+
+  <script>
+window.addEventListener("load", function () {
+    document.getElementById("loader").classList.add("hide");
+});
+</script>
 
 </body>
 </html>

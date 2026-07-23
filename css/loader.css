@@ -1,0 +1,58 @@
+/* Fullscreen Loader */
+#loader {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #212121;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+    overflow: hidden;
+
+    transition: opacity .6s ease, visibility .6s ease;
+}
+
+#loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Loader */
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #e8e8e8;
+    border: 4px solid #e8e8e8;
+    box-shadow: 0 0 3px #e8e8e8;
+    filter: blur(.4px);
+    overflow: hidden;
+}
+
+/* Moving Shadow */
+.shadow {
+    position: absolute;
+    top: -10px;
+    left: -120px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #212121;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(340px);
+    }
+}
