@@ -37,9 +37,15 @@
   position: relative;
   background: var(--pg-bg);
   color: var(--pg-text);
-  padding: clamp(72px, 10vw, 140px) clamp(20px, 5vw, 64px);
+  padding: clamp(72px, 10vw, 140px) clamp(16px, 3vw, 40px);
   overflow: hidden;
   isolation: isolate;
+    background-image: 
+    linear-gradient(rgba(11, 11, 13, 0.85), rgba(11, 11, 13, 0.85)),
+    url('/assest/bg3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .pg-container {
@@ -47,6 +53,8 @@
   z-index: 2;
   max-width: var(--pg-max-w);
   margin: 0 auto;
+   max-width: 1720px;
+
 }
 
 /* ============================== HEADER ============================== */
@@ -97,7 +105,7 @@ font-family: var(--font-display);
 
 .pg-preview {
   margin: clamp(48px, 7vw, 88px) auto 0;
-  max-width: 1290px;
+   max-width: none; /* remove the old 1290px cap so each card can grow */
 }
 
 .pg-preview-frame {
@@ -126,7 +134,7 @@ font-family: var(--font-display);
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
+ aspect-ratio: 4 / 2.6; /* shorter/wider than 16/10 — fills horizontal space better without cards getting too tall */
   object-fit: cover;
   border-radius: calc(var(--pg-radius-lg) - 8px);
   transition: transform 900ms var(--pg-ease);
@@ -339,5 +347,232 @@ font-family: var(--font-display);
   .pg-float {
     transition: none;
     animation: none;
+  }
+}
+
+
+.projects-button1 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+     max-width: 100%; /* let it fill pg-container instead of capping at 1600px */
+  gap: 24px; 
+    max-width: 1600px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+
+/* Preview container */
+.pg-preview {
+    width: 100%;
+}
+
+
+/* Glass frame */
+.pg-preview-frame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+}
+
+
+/* Image */
+.pg-preview-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+
+/* Glow effect */
+.pg-preview-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.15),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+
+.pg-preview-frame:hover .pg-preview-glow {
+    opacity: 1;
+}
+
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .projects-button1 {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .pg-preview-img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .projects-button {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    .projects-button1 {
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+
+    .pg-preview-frame {
+        border-radius: 18px;
+    }
+
+    .pg-preview-img {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+.pg-preview-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  isolation: isolate;
+}
+
+/* Dim + slight zoom on the image itself */
+.pg-preview-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.5s ease;
+}
+
+.pg-preview-frame:hover .pg-preview-img {
+  transform: scale(1.06);
+  filter: brightness(0.55) saturate(1.1);
+}
+
+/* Dark gradient wash, not flat overlay */
+.pg-preview-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0) 40%, rgba(10,10,10,0.75) 100%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.pg-preview-frame:hover::before {
+  opacity: 1;
+}
+
+/* Label + corner brackets, blueprint style */
+/* remove the old generic ::after label rule, replace with these two */
+
+.pg-preview-frame--library::after {
+  content: "→ Browse the project library";
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 12px);
+  color: #f5f1e8;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border: 1px solid rgba(245, 241, 232, 0.4);
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.35);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+  z-index: 3;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.pg-preview-frame--duda::after {
+  content: "→ Explore Duda website services";
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 12px);
+  color: #f5f1e8;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border: 1px solid rgba(124, 136, 255, 0.5); /* accent-tinted border to differentiate */
+  border-radius: 999px;
+  background: rgba(67, 83, 255, 0.25); /* uses your --pg-accent tone */
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+  z-index: 3;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.pg-preview-frame--library:hover::after,
+.pg-preview-frame--duda:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.pg-preview-frame:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Corner brackets that draw in on hover */
+.pg-preview-frame .pg-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f5f1e8;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.pg-corner.tl { top: 14px; left: 14px; border-right: none; border-bottom: none; transform: translate(-6px, -6px); }
+.pg-corner.tr { top: 14px; right: 14px; border-left: none; border-bottom: none; transform: translate(6px, -6px); }
+.pg-corner.bl { bottom: 14px; left: 14px; border-right: none; border-top: none; transform: translate(-6px, 6px); }
+.pg-corner.br { bottom: 14px; right: 14px; border-left: none; border-top: none; transform: translate(6px, 6px); }
+
+.pg-preview-frame:hover .pg-corner {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Existing glow, sit it below everything */
+.pg-preview-glow {
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .pg-preview-img {
+    aspect-ratio: 16 / 11;
   }
 }
