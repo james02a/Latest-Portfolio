@@ -1166,6 +1166,15 @@ button {
 /* ==========================================================================
    6. CONTACT
    ========================================================================== */
+
+   .contact{
+   background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/assest/bg4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   }
 .contact__grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
