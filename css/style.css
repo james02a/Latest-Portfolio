@@ -1862,7 +1862,16 @@ html.mnav-lock body {
 }
 @media (max-width: 1920px) {
   :root {
-    --nav-h: 104px; /* match actual laptop nav height */
+    --nav-h: 90px; /* match actual laptop nav height */
+    .hero__headline {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(40px, 4.8vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
   }
   
   .hero__intro {
